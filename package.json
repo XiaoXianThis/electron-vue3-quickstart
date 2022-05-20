@@ -1,0 +1,47 @@
+{
+  "name": "electron-vue3-quickstart",
+  "private": true,
+  "version": "0.0.1",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:3000 && electron .",
+    "electron:serve": "concurrently -k \"npm run dev\" \"npm run electron\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "cross-env": "^7.0.3",
+    "electron-builder": "^23.0.3",
+    "vite": "^2.9.9",
+    "concurrently": "^7.2.0",
+    "electron": "^18.2.4",
+    "vue": "^3.2.25",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.appid",
+    "productName": "electron-vue3-quickstart",
+    "copyright": "Copyright © 2022 APP",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    }
+  }
+}
