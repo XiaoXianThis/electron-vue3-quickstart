@@ -5,7 +5,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
 //是否为开发模式，打包时需要改成false才可以正常运行
-const IS_DEV = false
+const IS_DEV = true
 
 function createWindow () {
   // 创建浏览器窗口

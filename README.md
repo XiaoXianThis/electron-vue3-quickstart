@@ -2,6 +2,8 @@
 
 快速开始一个electron + vue3项目，参考知乎文章 [Vite+Electron快速构建一个VUE3桌面应用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/421460116)
 
+
+
 ### 1.克隆 & 安装依赖
 
 ```shell
@@ -12,14 +14,14 @@ git clone https://github.com/XiaoXianThis/electron-vue3-quickstart.git
 cnpm install
 ```
 
----
+
 
 ### 2.运行项目
 
-先修改 `electron/main.js`
+先打开 `electron/main.js`
 
 ```javascript
-//是否开发模式（为了热更新）
+//是否开发模式，确保为true（为了热更新）
 const IS_DEV = true
 ```
 
@@ -29,14 +31,14 @@ const IS_DEV = true
 npm run electron:serve
 ```
 
----
+
 
 ### 3.打包
 
 先修改 `electron/main.js`
 
 ```js
-//打包前改成false
+//开发时为true，打包时需要改成false
 const IS_DEV = false
 ```
 
@@ -46,7 +48,7 @@ const IS_DEV = false
 npm run electron:build
 ```
 
----
+
 
 ### 修改软件信息
 
